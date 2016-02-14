@@ -1,13 +1,11 @@
 body {
-    background-color: lightblue;
+    background-color: #d0f1e4;
 }
 
 h1 {
-    color: navy;
-    margin-left: 20px;
+    color: #1e3f66;
 }
 
 p {
-    font-family: "Tahoma", 
-Arial, sans-serif;
+    font-family: "Tahoma", Arial, sans-serif;
 }
