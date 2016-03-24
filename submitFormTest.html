@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+
+
+
+body {
+  background-color: #0099BA
+}
+
+#texta{
+  
+  width: 600px;
+  height: 800px;
+  
+}
+
+form {
+  display: block;
+  margin-top: 7em;
+  text-align: center;
+}
+
+input[type=text] {
+  width: 80%;
+  height: 200px;
+  margin-bottom: 3em;
+/*   vertical-align: top; */
+  text-align: left;
+  font-family: "Futura Light", Futura, sans-serif;
+  font-size: medium;
+  padding: 1em;
+  padding-top: 0em;
+  border: none;
+}
+
+input[type=submit] {
+  width: 17%;
+  border-radius: 2em;
+  background-color: #ffffff;
+  font-size: large;
+  color: #808285;
+  border: none;
+  padding: .5em;
+  font-family: "Futura Light", Futura, sans-serif;
+}
+
+input[type=submit]:hover {
+  background-color: #8CCCD9;
+  color: #ffffff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+ <form action="stickiesFormTest.html" method="get"> 
+  <textarea id="texta"></textarea>
+  
+<!-- <input type="text" name="fname">
+  <br> -->
+  
+<!-- <a href="stickiesFormTest.html"> <div style="width:100px; height:100px; background-color:blue;"></div>
+ -->
+	<input id = "submit" type="submit" value="Submit your idea!"></input>
+
+
+  </a>
+
+    </form>
+
+  <script type="text/javascript">
+
+
+var texta = document.getElementById('texta');
+var submit = document.getElementById("submit");
+submit.addEventListener('click', function () {
+	localStorage.setItem("text", texta.value)
+});
+
+var makePostIt = function (n) {
+var self = this;
+self.square = document.createElement('div');
+document.body.appendChild(self.square);
+self.square.style.width = "300px";
+self.square.style.height = "300px";
+self.square.style.backgroundColor = "yellow";
+self.square.style.position = "relative";
+self.square.style.left = "0px";
+self.square.style.top= "0px";
+
+}
+
+submit.addEventListener("click", function ()
+{localStorage.setItem("box", new makePostIt()
+
+	)
+
+}
+);
+
+	
+
+  </script>
+
+</body>
+
+
+</html>
