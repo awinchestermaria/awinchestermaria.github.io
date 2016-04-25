@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>BOP</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <style type="text/css">
+
+    *{
+    margin:0px;
+    padding:0px;
+}
+
+#one{
+    width: 1000px;
+    height: 100px;
+    background-color: none;
+    color: black;
+    font-family: "Futura";
+    padding: 5px;
+    text-align: left;
+    font-size: 30pt;
+   	position: absolute; 
+   	top: 400px; 
+   	left: 900px;
+
+}
+
+#two{
+    width: 1000px;
+    height: 100px;
+    background-color: none;
+    color: black;
+    font-family: "Futura";
+    padding: 5px;
+    text-align: left;
+    font-size: 30pt;
+   	position: absolute; 
+   	top: 400px; 
+   	left: 900px;
+
+}
+
+
+#three{
+    width: 1000px;
+    height: 100px;
+    background-color: none;
+    color: black;
+    font-family: "Futura";
+    padding: 5px;
+    text-align: left;
+    font-size: 30pt;
+   	position: absolute; 
+   	top: 400px; 
+   	left: 900px;
+
+}
+
+#four{
+    width: 1000px;
+    height: 100px;
+    background-color: none;
+    color: black;
+    font-family: "Futura";
+    padding: 5px;
+    text-align: left;
+    font-size: 30pt;
+   	position: absolute; 
+   	top: 400px; 
+   	left: 900px;
+
+}
+
+#five{
+    width: 1000px;
+    height: 100px;
+    background-color: none;
+    color: black;
+    font-family: "Futura";
+    padding: 5px;
+    text-align: left;
+    font-size: 30pt;
+   	position: absolute; 
+   	top: 400px; 
+   	left: 900px;
+
+}
+
+#six{
+    width: 1000px;
+    height: 100px;
+    background-color: none;
+    color: black;
+    font-family: "Futura";
+    padding: 5px;
+    text-align: left;
+    font-size: 30pt;
+   	position: absolute; 
+   	top: 400px; 
+   	left: 900px;
+}
+
+#seven{
+    width: 1000px;
+    height: 100px;
+    background-color: none;
+    color: black;
+    font-family: "Futura";
+    padding: 5px;
+    text-align: left;
+    font-size: 30pt;
+    position: absolute; 
+    top: 400px; 
+    left: 900px;
+}
+
+#eight{
+    width: 1000px;
+    height: 100px;
+    background-color: none;
+    color: black;
+    font-family: "Futura";
+    padding: 5px;
+    text-align: left;
+    font-size: 30pt;
+    position: absolute; 
+    top: 400px; 
+    left: 900px;
+}
+
+#nine{
+    width: 1000px;
+    height: 100px;
+    background-color: none;
+    color: black;
+    font-family: "Futura";
+    padding: 5px;
+    text-align: left;
+    font-size: 30pt;
+    position: absolute; 
+    top: 400px; 
+    left: 900px;
+}
+
+
+@font-face {
+font-family: 'Futura Lt BT Light';
+src: url('/fonts/futura_lt_bt_light-webfont.ttf') format('truetype');
+font-style: normal;
+font-weight: normal;
+}
+
+#intro{
+    width: 1000px;
+    height: 100px;
+    background-color: none;
+    color: black;
+    font-family: 'Futura Lt BT Light';
+    padding: 5px;
+    text-align: left;
+    font-size: 24pt;
+    position: absolute; 
+    top: 200px; 
+    left: 900px;
+}
+
+.describe{
+    font-family: 'Futura Lt BT Light';
+    text-align: left;
+    font-size: 24pt;
+}
+
+h1 {
+  font-size: 30pt;
+  font-family: "Futura";
+  color: #3f3f3f;
+}
+
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/fonts/fontawesome-webfont.eot?v=4.6.1');
+  src: url('/fonts/fontawesome-webfont.eot?#iefix&v=4.6.1') format('embedded-opentype'), 
+  url('/fonts/fontawesome-webfont.woff2?v=4.6.1') format('woff2'), 
+  url('/fonts/fontawesome-webfont.woff?v=4.6.1') format('woff'), 
+  url('/fonts/fontawesome-webfont.ttf?v=4.6.1') format('truetype'), 
+  url('/fonts/fontawesome-webfont.svg?v=4.6.1#FontAwesomeRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* ICONS */
+/* Icon Back */
+.hvr-icon-back {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+ /* padding-left: 2.2em;*/
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+.hvr-icon-back:before {
+  content: "\f137";
+  position: absolute;
+  left: 0px;
+  top: -700px;
+  padding: 0 1px;
+  color: black;
+  font-family: 'FontAwesome';
+  font-size: 50pt;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-icon-back:hover:before, .hvr-icon-back:focus:before, .hvr-icon-back:active:before {
+  -webkit-transform: translateX(-4px);
+  transform: translateX(-4px);
+}
+
+
+/* Icon Forward */
+.hvr-icon-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-right: 4.2em;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+.hvr-icon-forward:before {
+  content: "\f138";
+  position: absolute;
+  left: 650px;
+  top: -700px;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  color: black;
+   font-size: 50pt;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-icon-forward:hover:before, .hvr-icon-forward:focus:before, .hvr-icon-forward:active:before {
+  -webkit-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+
+
+    </style>
+
+</head>
+<body>
+
+<img src="/BOP_iPadRez0002.jpg" alt="" usemap="#BOPmap" id="" />
+
+<map id="BOPMap" name="BOPmap">
+    <area shape="rect" coords="87,482,197,627" href="#" alt="" item="one" id="partoneArea"/>
+    <area shape="rect" coords="190,466,397,655" href="#" alt="" item="two" id="parttwoArea"/>
+    <area shape="rect" coords="210,870,316,1044" href="#" alt="" item="three" id="partthreeArea"/>
+    <area shape="rect" coords="130,1020,259,1301" href="#" alt="" item="four" id="partfourArea"/>
+    <area shape="rect" coords="232,677,384,816" href="#" alt="" item="five" id="partfiveArea"/>
+    <area shape="rect" coords="517,888,624,1003" href="#" alt="" item="six" id="partsixArea"/>
+    <area shape="rect" coords="534,1137,690,1291" href="#" alt="" item="six" id="partsixArea"/>
+<!--     <area shape="rect" coords="179,914,384,1307" href="#" alt="" item="seven" id="partsevenArea"/> -->
+    <area shape="rect" coords="457,1195,525,1321" href="#" alt="" item="eight" id="parteightArea"/>
+    <area shape="rect" coords="348,1164,456,1340" href="#" alt="" item="nine" id="partnineArea"/>
+</map> 
+
+
+<div id="intro">
+<h1>Blowout Preventer (BOP)</h1>
+
+Click on a number to learn more about each part of the BOP. 
+<br>Rotate your view of the BOP by clicking the forward arrow.</div>
+
+
+<div id="one">The Subsea Data Relay and Storage System 
+<br>
+<div class="describe">
+This performs records select sensor data on the lower stack. Relays then select sensor data across the three branch networks via the DCAs on the lower stack for transmission to the surface. This system two modes that consist of nominal and emergency mode. During Nominal Mode the SDRS continuously logs and sends sensor data to surface. When in Emergency Mode (during power loss) the SDRS will reduce sample rate to conserve battery life. During secondary intervention, the SDRS can be accessed and its battery recharged via ROV.
+</div>
+</div>
+
+<div id="two">Lower Marine Riser Package Integrated Manifold Assemblies (LMRP IMA)
+<br>
+<div class="describe">
+The Integrated Manifold Assembly consists of solenoid operated pilot valves, main stage supply valves, shuttle valves, and regulators. These IMA’s are arranged into three separate channels A, B, and C to provide fault tolerant control of each subsea function. Each channel can individually actuate a BOP function. IMA’s mount into a rack structure on the LMRP and LBOP allowing for efficient maintenance and quality control at the Line Replaceable  Unit level. The LMRP IMA’s include functionality for the Annulars, LMRP Connector, and Upper Choke and Kill Valves.
+</div>
+</div>
+
+
+<div id="three">Subsea Reservoir
+<br>
+<div class="describe">
+The Subsea Reservoir Assembly is a novel design that allows for a large capacity pressure compensated fluid reservoir which is still protected from the environment. This key technology innovation helps the emergency system retain its depth independence while adding extra fluid capacity for redundant emergency system functions.  
+</div>
+</div>
+
+<div id="four">Emergency Subsea Pump Module (eSSPM)
+<br>
+<div class="describe">
+The Emergency Subsea Pump Module allows for two variable displacement pumps, direct shaft mounted on an electric motor to provide the necessary fluid pressure and flow to close the ram safely during an emergency. Pumps have the advantage over accumulator systems due to the fact that they do not suffer from depth changes due to natural gas law and other environmental factors. The pump technology also allows for more consistent pressure and flow throughout the emergency function.
+</div>
+</div>
+
+
+
+<div id="five">Simplified Hydraulic Stabs
+<br>
+<div class="describe">
+The hydraulic stabs consist of stabs, receptacles and mounting plates. Filters, Regulators, and pilot accumulators are included for pilot generation. These hydraulic stabs will transfer hydraulic power between the LMRP and LBOP on the three independent hydraulic power channels.
+</div>
+</div>
+
+
+<div id="six">Lower Blow Out Preventer Distributed Control Assemblies (LBOP DCA)
+<br>
+<div class="describe">
+The Distributed Control Assembly provides redundant control and monitoring of subsea components, i.e. Integrated Manifold Assemblies. These DCA’s consist of multiple independent subsea Programmable Logic Controllers/Single Board Computers to handle subsea component power distribution, communication, and manage surface control input. All of these features meet requirements for fault tolerance, safety ratings, safe state upon loss of power or communications as well as fault localization.
+</div>
+</div>
+
+
+<div id="seven">Lower Blow Out Preventer Integrated Manifold Assemblies (LBOP IMA) 
+<br>
+<div class="describe">
+The Integrated Manifold Assembly consists of solenoid operated pilot valves, main stage supply valves, shuttle valves, and regulators. These IMA’s are arranged into three separate channels A, B, and C to provide fault tolerant control of each subsea function. Each channel can individually actuate a BOP function. IMA’s mount into a rack structure on the LMRP and LBOP allowing for efficient maintenance and quality control at the Line Replaceable  Unit level. The LBOP IMA’s include functionality for the Upper Blind Shear Ram, Lower Blind Shear Ram, Casing Shear Ram, associated LBOP Choke and Kill valves, and all required pipe and test rams.
+</div>
+</div>
+
+
+<div id="eight">Subsea Variable Speed Drive (Subsea VSD)
+<br>
+<div class="describe">
+The Subsea Variable Speed Drive allow for motor control of the Subsea Pump Module. This VSD allows for filtered input of DC power and a conversion to AC power for control of the motor speed.
+</div>
+</div>
+
+
+<div id="nine">Subsea Battery Assembly
+<br>
+<div class="describe">
+The Subsea Battery Assembly consists of 40 cell, pressure compensated, 19kWh battery pack which will provide emergency power to the eSSPA functions. This assembly is housed in an oil filled, pressure compensated box allowing for depth independence and space savings.
+</div>
+</div>
+
+
+
+<a class="nav hvr-icon-forward" href="test03.html"></a>
+<a class="nav hvr-icon-back" href="test02.html"></a>
+
+
+
+<script type="text/javascript">
+
+
+$("#one").hide();
+
+$("map#BOPMap").click(function(ev){
+    var target = $(ev.target);
+    var targetId = target.attr('id');
+    if(targetId == 'partoneArea') {
+      $("#one").show();
+      $("#two").hide();
+      $("#three").hide();
+      $("#four").hide();
+      $("#five").hide();
+      $("#six").hide();
+      $("#seven").hide();
+      $("#eight").hide();
+      $("#nine").hide();
+    }
+});
+
+
+
+$("#two").hide();
+
+$("map#BOPMap").click(function(ev){
+    var target = $(ev.target);
+    var targetId = target.attr('id');
+    if(targetId == 'parttwoArea') {
+      $("#two").show();
+      $("#one").hide();
+      $("#three").hide();
+      $("#four").hide();
+      $("#five").hide();
+      $("#six").hide();
+      $("#seven").hide();
+      $("#eight").hide();
+      $("#nine").hide();
+    }
+});
+
+
+
+$("#three").hide();
+
+$("map#BOPMap").click(function(ev){
+    var target = $(ev.target);
+    var targetId = target.attr('id');
+    if(targetId == 'partthreeArea') {
+      $("#three").show();
+      $("#two").hide();
+      $("#one").hide();
+      $("#four").hide();
+      $("#five").hide();
+      $("#six").hide();
+      $("#seven").hide();
+      $("#eight").hide();
+      $("#nine").hide();
+    }
+});
+
+
+
+$("#four").hide();
+
+$("map#BOPMap").click(function(ev){
+    var target = $(ev.target);
+    var targetId = target.attr('id');
+    if(targetId == 'partfourArea') {
+      $("#four").show();
+      $("#two").hide();
+      $("#three").hide();
+      $("#one").hide();
+      $("#five").hide();
+      $("#six").hide();
+      $("#seven").hide();
+      $("#eight").hide();
+       $("#nine").hide();
+    }
+});
+
+
+
+$("#five").hide();
+
+$("map#BOPMap").click(function(ev){
+    var target = $(ev.target);
+    var targetId = target.attr('id');
+    if(targetId == 'partfiveArea') {
+      $("#five").show();
+      $("#two").hide();
+      $("#three").hide();
+      $("#four").hide();
+      $("#one").hide();
+      $("#six").hide();
+      $("#seven").hide();
+      $("#eight").hide();
+      $("#nine").hide();
+    }
+});
+
+
+$("#six").hide();
+
+$("map#BOPMap").click(function(ev){
+    var target = $(ev.target);
+    var targetId = target.attr('id');
+    if(targetId == 'partsixArea') {
+      $("#six").show();
+      $("#two").hide();
+      $("#three").hide();
+      $("#four").hide();
+      $("#one").hide();
+      $("#five").hide();
+      $("#seven").hide();
+      $("#eight").hide();
+      $("#nine").hide();
+    }
+});
+
+
+$("#seven").hide();
+
+$("map#BOPMap").click(function(ev){
+    var target = $(ev.target);
+    var targetId = target.attr('id');
+    if(targetId == 'partsevenArea') {
+      $("#seven").show();
+      $("#two").hide();
+      $("#three").hide();
+      $("#four").hide();
+      $("#one").hide();
+      $("#five").hide();
+      $("#six").hide();
+      $("#eight").hide();
+      $("#nine").hide();
+    }
+});
+
+
+$("#eight").hide();
+
+$("map#BOPMap").click(function(ev){
+    var target = $(ev.target);
+    var targetId = target.attr('id');
+    if(targetId == 'parteightArea') {
+      $("#eight").show();
+      $("#two").hide();
+      $("#three").hide();
+      $("#four").hide();
+      $("#one").hide();
+      $("#five").hide();
+      $("#six").hide();
+      $("#seven").hide();
+      $("#nine").hide();
+    }
+});
+
+$("#nine").hide();
+
+$("map#BOPMap").click(function(ev){
+    var target = $(ev.target);
+    var targetId = target.attr('id');
+    if(targetId == 'partnineArea') {
+      $("#nine").show();
+      $("#two").hide();
+      $("#three").hide();
+      $("#four").hide();
+      $("#one").hide();
+      $("#five").hide();
+      $("#six").hide();
+      $("#seven").hide();
+      $("#eight").hide();
+    }
+});
+
+</script>
+
+
+</body>
+</html>
