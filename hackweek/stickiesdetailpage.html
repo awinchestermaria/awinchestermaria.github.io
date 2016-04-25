@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Idea Details</title>
+
+    
+    <title>Space Clicker</title>
+
+     <style type="text/css">
+    
+    .vote {
+        display: inline-block;
+        position: relative;
+    }
+
+    div {
+        display: inline-block;
+        position: relative;
+        margin-left: 45em;
+    }
+    
+    button {
+      padding: 1em;
+    }
+
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Futura Light,sans-serif;
+  font-size:100%;
+  background:#DDDDDD;
+  color:#000;
+  text-overflow: scroll;
+  text-align: center;
+}
+
+h2,p{
+  font-size:100%;
+  font-weight:normal;
+}
+
+ul,li{
+  list-style:none;
+
+}
+
+ul{
+  overflow:scroll;
+  padding:3em;
+}
+
+
+ul li {
+  text-decoration:none;
+  color:#000;
+  background:#FCEDA2;
+  display:inline-block;
+  height:50em;
+  width:50em;
+  padding:2em;
+  /* Firefox */
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  /* Safari+Chrome */
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  /* Opera */
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  text-align: center;
+  position: relative;
+  text-align: center;
+}
+
+ul li h2{
+  font-size:140%;
+  font-weight:bold;
+}
+
+ul li p{
+  font-family:"Futura Light",Futura,sans-serif;
+  font-size:100%;
+}
+
+</style>
+    
+  </head>
+
+  <body>
+
+
+<a href='ideas.html' ><img src='http://s16.postimg.org/kf7thh5t1/hack_wk_logo_01.png' border='0' alt="hack week logo" /></a>
+<br />
+
+
+  <ul>
+  <li id="bigdaddy">
+  </li>
+ </ul>
+
+
+   <script type="text/javascript">
+
+   var bigdaddy = document.getElementById("bigdaddy");
+
+   bigdaddy.innerHTML = localStorage.getItem("mess");
+
+    </script>
+
+
+
+<script type="text/javascript">
+    var clicks = 0;
+    function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    </script>
+
+    <button type="button" onClick="onClick()">Vote!</button>
+    <div><p>Votes: <a id="clicks">0</a></p></div> 
+
+
+  <br><br>
+
+<p>Comments</p>
+
+<textarea id = "textArea" style ="width:75em; height:300px; position: relative; margin-top: 2em; padding: 2em; ">
+</textarea>
+
+<br><br>
+<input id ="submitButton" type="button" value="submit!" style="margin-bottom: 3em;"> </input>
+<br><br>
+
+
+<script type="text/javascript">
+  
+  var makeComment = [];
+  var submitButton = document.getElementById("submitButton");
+  
+  submitButton.addEventListener("click", function makeShit () 
+
+  {var textArea = document.getElementById("textArea");
+    
+    makeComment.push(textArea.value);
+    makeComment.forEach(
+
+      function commenting (message) {
+        var self = this;
+        self.square = document.createElement("div");
+        document.body.appendChild(self.square);
+        self.square.style.height = "200px";
+        self.square.style.width = "50%";
+        self.square.style.backgroundColor = "#d3d3d3";
+        self.square.style.margin = "20px";
+        self.square.style.padding = "10px";
+        self.square.style.font = "Futura Light";
+        self.square.style.textAlign = "left";
+        self.square.classList.add("squares");
+        self.square.innerText = message;
+    });
+
+  });
+      
+    
+
+
+</script>
+    
+    
+    
+    
+  </body>
+</html>
