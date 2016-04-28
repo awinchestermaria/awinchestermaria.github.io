@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>wunderground api test</title>
+    <style>
+    
+    #Cambridge {
+    	
+    	padding:1em;
+    	background-color:rgba(235,225,115,.5);
+    	color:white;
+    	font-family:Helvetica;
+    	font-size:1em;
+    	float:left;
+        display: inline;
+        height:2000px;
+        position: relative;
+
+    }
+
+    
+
+
+    #Dallas {
+        
+        padding:1em;
+        background-color:rgba(230,125,195,.5);
+        color:white;
+        font-family:Helvetica;
+        font-size:1em;
+        float:left;
+        display: inline;
+        height:2000px;
+        position: relative;
+
+    }
+
+    #Minerva {
+        
+        padding:1em;
+        background-color:rgba(100,180,15,.5);
+        color:white;
+        font-family:Helvetica;
+        font-size:1em;
+        float:left;
+        display: inline;
+        height:2000px;
+        position: relative;
+    }
+
+
+    #Wolfeboro {
+        
+        padding:1em;
+        background-color:rgba(100,180,125,.5);
+        color:white;
+        font-family:Helvetica;
+        font-size:1em;
+        float:left;
+        display: inline;
+        height:2000px;
+        position: relative;
+    }
+
+    #Beverly {
+        
+        padding:1em;
+        background-color:rgba(120,120,122,.5);
+        color:white;
+        font-family:Helvetica;
+        font-size:1em;
+        float:left;
+        display: inline;
+        height:2000px;
+        position: relative;
+    }
+
+    #Belfast {
+        
+        padding:1em;
+        background-color:rgba(100,100,225,.5);
+        color:white;
+        font-family:Helvetica;
+        font-size:1em;
+        float:left;
+        display: inline;
+        height:2000px;
+        position: relative;
+    }
+
+        #Barcelona {
+        
+        padding:1em;
+        background-color:rgba(190,100,225,.5);
+        color:white;
+        font-family:Helvetica;
+        font-size:1em;
+        float:left;
+        display: inline;
+        height:2000px;
+        position: relative;
+    }
+
+        #Nice {
+        
+        padding:1em;
+        background-color:rgba(150,160,225,.5);
+        color:white;
+        font-family:Helvetica;
+        font-size:1em;
+        float:left;
+        display: inline;
+        height:2000px;
+        position: relative;
+    }
+
+    </style>
+
+</head>
+
+<body>
+    <script>
+    var apiKey = "53074e75a01c62de";
+
+  var response = null;
+
+    var makeAPIRequest = function(apiKey, state, city) {
+
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", function(){
+        response = JSON.parse(this.responseText);
+        
+        // document.body.style.backgroundImage = "url(" + response.current_observation.icon_url + ")";
+        
+        var windDiv = document.createElement('div');
+        windDiv.id = "temp";
+        var temp = response.current_observation.temp_f;
+        windDiv.id = city;
+        windDiv.innerText = city;
+        // windDiv.innerText.style = 
+        // "-webkit-transform: rotate(7deg)" ","
+        // "transform: rotate(7deg)";
+        windDiv.style.width = temp * 2 + "px";
+        windDiv.style.transform = "rotate(" + temp + "deg)";
+        //  -webkit-transform: rotate(180deg);
+        // transform: rotate(180deg);
+        document.body.appendChild(windDiv);
+    })
+
+    oReq.open("GET", "http://api.wunderground.com/api/" + apiKey + "/conditions/q/" + state + "/" + city + ".json");
+    oReq.send();
+ }
+
+ makeAPIRequest(apiKey, "MA", "Cambridge");
+ makeAPIRequest(apiKey, "France", "Nice");
+ makeAPIRequest(apiKey, "OH", "Minerva");
+ makeAPIRequest(apiKey, "MA", "Beverly");
+ makeAPIRequest(apiKey, "NH", "Wolfeboro");
+ makeAPIRequest(apiKey, "ME", "Belfast");
+  makeAPIRequest(apiKey, "Spain", "Barcelona");
+    </script>
+
+
+</body>
+
+</html>
